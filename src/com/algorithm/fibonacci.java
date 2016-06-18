@@ -1,4 +1,4 @@
-package com.string;
+package com.algorithm;
 /*
 Write a Java program to print Fibonacci series upto 100?
 This is one of the most popular coding interview question 
