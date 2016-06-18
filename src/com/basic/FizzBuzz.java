@@ -1,4 +1,4 @@
-package com.string;
+package com.basic;
 /*
 FizzBuzz problem : Write a Java program that prints the numbers 
 from 1 to 50. But for multiples of three print "Fizz" instead of 
