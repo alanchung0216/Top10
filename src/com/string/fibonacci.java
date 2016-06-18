@@ -16,8 +16,8 @@ fibonacci-series-in-java-using-recursion.html
 Read more: http://java67.blogspot.com/2012/08/10-java-coding-interview-questions-and.html#ixzz4BxJtnqGM
  */
 public class fibonacci {
-	/* fibonacci series
-	 * 0 1 1 2 3 5 8 13 21 ........
+	/* fibonacci series upto 15 (start from 0 till 15)
+	 * 0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610
 	 * f(n) = f(n-2) + f(n-1)
 	 */
 	public static long fib_loop(int n){
