@@ -14,6 +14,28 @@ Read more: http://java67.blogspot.com/2012/08/10-java-coding-interview-questions
 import java.util.Scanner;
 
 public class reverse_string {
+	// iterative version
+	public static String rev_string(String s){
+		char[] ca = s.toCharArray();
+		for (int i=0; i<ca.length/2; i++){
+			char temp = ca[i];
+			ca[i] = ca[ca.length-1-i];
+			ca[ca.length-1-i] = temp;				
+		}
+		return String.valueOf(ca);
+	}
+	
+	public static String recur_rev_string(String str){
+
+		if (str.length() > 1){
+			System.out.println(str.length());
+			return str.charAt(str.length()-1)
+					+ recur_rev_string(str.substring(0,str.length()-1));
+		} else {
+			return str;
+		}
+	}
+
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -22,13 +44,18 @@ public class reverse_string {
 		System.out.println("enter string : ");
 		while (sc.hasNextLine()){
 			str=sc.nextLine().trim();
-			char[] ca = str.toCharArray();
-			for (int i=0; i<ca.length/2; i++){
-				char temp = ca[i];
-				ca[i] = ca[ca.length-1-i];
-				ca[ca.length-1-i] = temp;				
-			}
-			System.out.println(String.valueOf(ca));
+			
+			// using API
+			//StringBuffer buf = new StringBuffer(str);
+			//StringBuffer rev = buf.reverse();
+			//System.out.println(rev);
+			
+			// using iterative method
+			//System.out.println(rev_string(str));
+			
+			// using recursive method
+			System.out.println(recur_rev_string(str));
+			
 			System.out.println("enter string : ");
 		}
 		sc.close();
