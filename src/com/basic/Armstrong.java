@@ -38,6 +38,7 @@ public class Armstrong {
 			if (num == 0) break;
 		}
 		System.out.println(num);
+		
 	}
 
 }
