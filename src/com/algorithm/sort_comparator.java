@@ -26,11 +26,35 @@ so be ready for that.
 
 Read more: http://java67.blogspot.com/2012/08/10-java-coding-interview-questions-and.html#ixzz4BxhGhKWK
  */
+
+class employee implements Comparable {
+	
+	String name;
+	String dept;
+	int age;
+
+	@Override
+	public int compareTo(Object o) {
+		// TODO Auto-generated method stub
+		employee ep = (employee) o;
+		return this.name.compareTo(ep.name);
+	}
+	
+}
 public class sort_comparator {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		employee ep1 = new employee();
+		ep1.name = "Alan";
+		employee ep2 = new employee();
+		ep2.name = "Grace";		
+		if (ep1.compareTo(ep2) > 0)
+			System.out.println(ep1.name + " greater than " + ep2.name);
+		else if (ep1.compareTo(ep2) < 0)
+			System.out.println(ep1.name + " less than " + ep2.name);
+		else
+			System.out.println(ep1.name + " equal " + ep2.name);		
 	}
 
 }
