@@ -30,7 +30,8 @@ public class Factorial {
 		while (sc.hasNextLine()) {
 			int num = sc.nextInt();
 			System.out.println(num + "! factorial is " + fact(num));
-			System.out.println(num + "! factorial recur is " + fact_recur(num));
+			System.out.println(num + 
+					"! factorial recursive is " + fact_recur(num));
 		}
 	}
 
