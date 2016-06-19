@@ -33,6 +33,7 @@ public class Factorial {
 			System.out.println(num + 
 					"! factorial recursive is " + fact_recur(num));
 		}
+		sc.close();
 	}
 
 }
