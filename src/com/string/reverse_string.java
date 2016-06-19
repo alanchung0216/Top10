@@ -29,8 +29,13 @@ public class reverse_string {
 
 		if (str.length() > 1){
 			System.out.println(str.length());
-			return str.charAt(str.length()-1)
-					+ recur_rev_string(str.substring(0,str.length()-1));
+			//reverse from end
+			//return str.charAt(str.length()-1)
+			//		+ recur_rev_string(str.substring(0,str.length()-1));
+			
+			// reverse from begin. got same result
+			return recur_rev_string(str.substring(1))
+					+ str.charAt(0);	
 		} else {
 			return str;
 		}
