@@ -1,5 +1,7 @@
 package com.linkedList;
-
+/* these two class already under linkedList_length.java
+ * since they are in the same package com.liskedList as
+ * find_middle_one_pass.java we don't need to redefine again. 
 class lnode {
 	public int value;
 	public lnode next;
@@ -30,7 +32,8 @@ class myLinkedList {
 		current = l;
 	}
 }
-public class linkedList_length {
+*/
+public class find_middle_one_pass {
 	
 	public static int findLength(myLinkedList mylist){
 		int count=0;
@@ -41,7 +44,19 @@ public class linkedList_length {
 		}
 		return count;
 	}
-
+	public static int find_middle_onepass(myLinkedList mylist){
+		lnode cur = mylist.head;
+		lnode fast = mylist.head;
+		while (fast != null) {
+			if (fast.next != null){
+				fast = fast.next.next;
+				cur = cur.next;
+			}
+			else
+				break;
+		}
+		return cur.value;
+	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		myLinkedList mylist = new myLinkedList();
@@ -59,7 +74,11 @@ public class linkedList_length {
 		for (int i=0; i<len/2; i++) {
 			curr = curr.next;
 		}
-		System.out.println("my linked list mid node is "
+		System.out.println("two pass - my linked list mid node is "
 				            + curr.value);
+		// find middle node. this is one pass approach
+		System.out.println("one pass - my linked list mid node is "
+				            + find_middle_onepass(mylist));
 	}
 }
+
