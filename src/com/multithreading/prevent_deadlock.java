@@ -50,13 +50,21 @@ class thread_B implements Runnable {
 		// B is not release name yet.
 		// thread A got data OK  and want to print name but
 		// no release data yet. A is waiting for name, deadlock
+		
+		// solution is to just move 
+		//synchronized(data){
+		//	data.value = 2;
+		//	System.out.println("B updated shared value "+data.value);
+		//}
+		// outside of synchronized(name){}
+		// note we don't need to do the same for Thread A run().
 		synchronized(name){
 			name.name = 6;
 			System.out.println("B updated shared name "+name.name);			
-		}
-		synchronized(data){
-			data.value = 2;
-			System.out.println("B updated shared value "+data.value);
+			synchronized(data){
+				data.value = 2;
+				System.out.println("B updated shared value "+data.value);
+			}
 		}
 		
 	}
