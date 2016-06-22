@@ -57,14 +57,11 @@ class thread_B implements Runnable {
 		//	System.out.println("B updated shared value "+data.value);
 		//}
 		// outside of synchronized(name){}
-		// note we don't need to do the same for Thread A run().
-		synchronized(name){
-			name.name = 6;
-			System.out.println("B updated shared name "+name.name);			
-			synchronized(data){
-				data.value = 2;
-				System.out.println("B updated shared value "+data.value);
-			}
+		// note we don't need to do the same for Thread A run().ayList
+			
+		synchronized(data){
+			data.value = 2;
+			System.out.println("B updated shared value "+data.value);
 		}
 		
 	}
