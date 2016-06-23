@@ -1,6 +1,7 @@
 package com.design_pattern;
 
 import com.design_pattern.single_by_threads.EasySingleton;
+import com.sean_tech_code.singleton_factory;
 
 // this code is inspired from top 20 core java interview questions
 // http://javarevisited.blogspot.com/2011/04/
@@ -11,6 +12,19 @@ import com.design_pattern.single_by_threads.EasySingleton;
 class mySingleton {
 	private static mySingleton instance;
 	private int value;
+	/* if we use this static block below then we don't need
+	 * to worry about thread safe issue because static block 
+	 * is done before running main() so there is no chance
+	 * multi threads will cause the problem
+	 * so this is the best solution
+	 
+		static {
+			sc = new singleton_factory();
+		}
+		public static mySingleton getInstance() {
+			return instance;
+		}	
+	*/
 	private mySingleton(){
 		// private won't allow anyone to construct this object
 		value = 5;
