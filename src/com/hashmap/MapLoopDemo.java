@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * Java Program to loop through Map in Java. This examples 
@@ -31,7 +32,10 @@ public class MapLoopDemo {
         System.out.println("Initial Salaries of workers");
         // alan wrote the coide below
         // HashMap is 
-        Map<Integer,Worker> map = new HashMap<>();
+        //Map<Integer,Worker> map = new HashMap<>();
+        // Concurrent HashMap handles race condition using
+        // ReentrantLock is better than HashTable using synchronized
+        Map<Integer,Worker> map = new ConcurrentHashMap<>();
         
         map.put(76833, new Worker(76833, "Tim", 3000));
         map.put(76834, new Worker(76834, "Tarun", 5000));
