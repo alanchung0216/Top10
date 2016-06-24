@@ -29,12 +29,49 @@ public class MapLoopDemo {
         // looping through map using foreach loop
         // print initial salary of workers
         System.out.println("Initial Salaries of workers");
-        
-        // first loop , show worked salary
-        // map entry is 
+        // alan wrote the coide below
+        // HashMap is 
         Map<Integer,Worker> map = new HashMap<>();
         
+        map.put(76833, new Worker(76833, "Tim", 3000));
+        map.put(76834, new Worker(76834, "Tarun", 5000));
+        map.put(76835, new Worker(76835, "Nikolai", 6000));
+        map.put(76836, new Worker(76836, "Roger", 3500)); 
         
+        // first loop using entrySet , show worked salary
+        Set<Map.Entry<Integer,Worker>> entryAll= map.entrySet();
+        
+        for (Map.Entry<Integer,Worker> i : entryAll) {
+        	System.out.println("Worker salary "+i.getValue().getSalary());
+        }
+        
+        // second loop using iterator, 
+        // first create a keySet iterator
+        // increase salary 8%
+        /*        
+        Iterator<Integer> itr = map.keySet().iterator();
+        
+        while (itr.hasNext()) {
+        	Worker cur = map.get(itr.next());
+        	int sal = (int) (cur.getSalary()*1.08);
+        	cur.setSalary(sal);
+        }
+        */ 
+        // third loop , or use keySet directly
+        Set<Integer> ks = map.keySet();
+        for (Integer i:ks){
+        	Worker cur = map.get(i);
+        	int sal = (int) (cur.getSalary()*1.08);
+        	cur.setSalary(sal);
+        }
+        // fourth loop, first get values set using collection to display the salary
+        // note map.values() has to use Collection, can not use Set
+        
+        Collection<Worker> ws = map.values();
+        
+        for (Worker w:ws){
+        	System.out.println("New salaries are "+w.getSalary());
+        }
         
         /*
 
@@ -105,8 +142,8 @@ public class MapLoopDemo {
             this.name = name;
         }
 
-        public final void setSalary(int salary) {
-            this.salary = salary;
+        public final void setSalary(int d) {
+            this.salary = d;
         }
 
         @Override
