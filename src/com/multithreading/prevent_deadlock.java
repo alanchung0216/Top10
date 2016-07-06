@@ -58,6 +58,9 @@ class thread_B implements Runnable {
 		//}
 		// outside of synchronized(name){}
 		// note we don't need to do the same for Thread A run().ayList
+		
+		// or synchronized data then name in the same order on
+		// both threads
 			
 		synchronized(data){
 			data.value = 2;

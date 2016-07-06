@@ -2,15 +2,6 @@ package com.linkedList;
 
 public class find_linkedlist_cycle {
 	
-	public static int findLength(myLinkedList mylist){
-		int count=0;
-		lnode cur = mylist.head;
-		while (cur != null){
-			count++;
-			cur = cur.next;
-		}
-		return count;
-	}
 	public static boolean find_cycle(myLinkedList mylist){
 		lnode cur = mylist.head;
 		lnode fast = mylist.head;
@@ -18,6 +9,7 @@ public class find_linkedlist_cycle {
 			if (fast.next != null){
 				fast = fast.next.next;
 				cur = cur.next;
+				if (fast == cur) break;
 			}
 			else
 				break;
