@@ -14,12 +14,46 @@ http://java67.blogspot.com/2016/05/
 fibonacci-series-in-java-using-recursion.html
 
 Read more: http://java67.blogspot.com/2012/08/10-java-coding-interview-questions-and.html#ixzz4BxJtnqGM
- */
+*/
+
+// 7/7/2016
+
 public class fibonacci {
-	/* fibonacci series upto 15 (start from 0 till 15)
-	 * 0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610
-	 * f(n) = f(n-2) + f(n-1)
-	 */
+	// fibonacci series upto 15 (start from 0 till 15)
+	public static int fib(int n){
+		// f(n) = f(n-2) + f(n-1)
+		if (n==0) return 0;
+		if (n==1) return 1;
+		int f_n_2 = 0;
+		int f_n_1 = 1;
+		int f_n = 0;
+		for (int i=2; i<=n; i++){
+			f_n = f_n_2 + f_n_1;
+			f_n_2 = f_n_1;
+			f_n_1 = f_n;
+		}
+		return f_n;
+	}
+	public static int fib_recur(int n){
+		if (n==0) return 0;
+		if (n==1) return 1;
+		return fib_recur(n-2) + fib_recur(n-1);
+	}
+	
+	public static void main(String args[]){
+		for (int i=0; i<=15; i++){
+			//System.out.println(fib(i));
+			System.out.println(fib_recur(i));
+		}
+	}
+}
+/*
+
+public class fibonacci {
+	// fibonacci series upto 15 (start from 0 till 15)
+	// 0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610
+	// f(n) = f(n-2) + f(n-1)
+	//
 	public static long fib_loop(int n){
 		if (n == 0) return 0;
 		if ((n == 1) || (n == 2)) return 1;
@@ -45,5 +79,5 @@ public class fibonacci {
 			System.out.print(fib_recur(i) + " ");
 		}
 	}
-
 }
+*/

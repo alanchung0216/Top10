@@ -14,6 +14,36 @@ Read more: http://java67.blogspot.com/2012/08/10-java-coding-interview-questions
 import java.util.Scanner;
 
 public class reverse_string {
+	
+	public static String rev_str(String s){
+		char[] ca = s.toCharArray();
+		for (int i=0; i<ca.length/2; i++){
+			char temp= ca[ca.length-1-i];
+			ca[ca.length-1-i] = ca[i];
+			ca[i] = temp;
+		}
+		return String.valueOf(ca);
+	}
+	
+	public static String rev_str_recur(String s){
+		if (s.length()  < 2) return s;
+		return rev_str_recur(s.substring(1,s.length())) + s.charAt(0);
+		//return rev_str_recur(s.substring(1)) + s.charAt(0);
+		//return s.charAt(s.length()-1) + rev_str_recur(s.substring(0, s.length()-1));
+	}
+	
+	public static void main(String args[]){
+		
+		//String str = "Hello World";
+		System.out.println(" enter string : ");
+		Scanner sc = new Scanner(System.in);
+		String str = sc.nextLine();
+		System.out.println(rev_str(str));	
+		System.out.println(rev_str_recur(str));
+	}
+}
+/*
+public class reverse_string {
 	// iterative version
 	public static String rev_string(String s){
 		char[] ca = s.toCharArray();
@@ -67,3 +97,4 @@ public class reverse_string {
 	}
 
 }
+*/

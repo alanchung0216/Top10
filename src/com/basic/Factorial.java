@@ -7,7 +7,27 @@ In general, n! ("enn factorial") means the product of all the
 whole numbers from 1 to n; that is, n! = 1×2×3×...×n.
  */
 import java.util.Scanner;
-
+// 7/7/2016
+public class Factorial {
+	
+	static int fact(int n){
+		int total=1;
+		for (int i=1; i<=n; i++){
+			total = total*i;
+		}
+		return total;
+	}
+	static int fact_recur(int n){
+		if (n == 1) return 1;
+		return n*fact_recur(n-1);
+	}
+	public static void main(String[] args){
+		int num=4;
+		System.out.println(fact(num));
+		System.out.println(fact_recur(num));
+	}
+}
+/*
 public class Factorial {
 
 	public static int fact(int n){
@@ -37,3 +57,4 @@ public class Factorial {
 	}
 
 }
+*/

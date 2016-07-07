@@ -18,7 +18,22 @@ Read more: http://java67.blogspot.com/2012/08/10-java-coding-interview-questions
  */
 
 import java.util.Scanner;
-
+// 7/7/2016
+public class PrimeNumber {
+	public static void main(String args[]){
+		int num = 12;
+		boolean prime = true;
+		for (int i=2; i<num; i++){
+			if (num % i == 0) {
+				prime = false;
+				break;
+			}
+			
+		}
+		System.out.println((prime) ? "true" : "false");
+	}
+}
+/*
 public class PrimeNumber {
 	
 	//A number is called prime number if its not divisible by 
@@ -47,3 +62,4 @@ public class PrimeNumber {
 	}
 
 }
+*/

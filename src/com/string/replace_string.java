@@ -20,6 +20,24 @@ Read more: http://java67.blogspot.com
 /2012/08/10-java-coding-interview-questions-and.html#ixzz4BwzZPSE7
  
 */
+// 7/7/2016 
+public class replace_string {
+	static String repl(String str, char oldc, char newc){
+		char[] ca = str.toCharArray();
+		for (int i=0; i<ca.length; i++){
+			if (ca[i] == oldc){
+				ca[i] = newc;
+			}
+		}
+		return String.valueOf(ca);
+		//return new String(ca);
+	}
+	public static void main(String args[]){
+		String str = "hallo warld";
+		System.out.println(repl(str, 'a', 'o'));
+	}
+}
+/*
 public class replace_string {
 	public static String repl(String str, char oldc, char newc ){
 		char[] ca = str.toCharArray();
@@ -50,3 +68,4 @@ public class replace_string {
 	}
 
 }
+*/
