@@ -13,7 +13,7 @@ http://www.javaworld.com/article/2072762/java-app-dev/object-equality.html
  * Person class with equals and hashcode implementation in Java
  * @author Javin Paul
  */
-public class Person {
+class Person {
     private int id;
     private String firstName;
     private String lastName;
@@ -59,7 +59,7 @@ public class Person {
 }
 
 
-Read more: http://javarevisited.blogspot.com/2011/02/how-to-write-equals-method-in-java.html#ixzz4CQkwquRA
+//Read more: http://javarevisited.blogspot.com/2011/02/how-to-write-equals-method-in-java.html#ixzz4CQkwquRA
 public class Equal_Hashcode_demo {
 
 	public static void main(String[] args) {
