@@ -1,7 +1,7 @@
 package com.design_pattern;
 
 import com.design_pattern.single_by_threads.EasySingleton;
-import com.sean_tech_code.singleton_factory;
+
 
 // this code is inspired from top 20 core java interview questions
 // http://javarevisited.blogspot.com/2011/04/
