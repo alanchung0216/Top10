@@ -47,6 +47,7 @@ public class reverse_int_or_str {
 		System.out.println(rev_int(Integer.valueOf(str)));
 		System.out.println(rev_str(str));	
 		System.out.println(rev_str_recur(str));
+		sc.close();
 	}
 }
 /*
