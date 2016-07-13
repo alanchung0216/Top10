@@ -13,8 +13,14 @@ Read more: http://java67.blogspot.com/2012/08/10-java-coding-interview-questions
  */
 import java.util.Scanner;
 
-public class reverse_string {
+public class reverse_int_or_str {
 	
+	public static int rev_int(int n) {
+		String str = String.valueOf(n);
+		String rev = rev_str(str);
+		return Integer.valueOf(rev);
+		
+	}
 	public static String rev_str(String s){
 		char[] ca = s.toCharArray();
 		for (int i=0; i<ca.length/2; i++){
@@ -38,6 +44,7 @@ public class reverse_string {
 		System.out.println(" enter string : ");
 		Scanner sc = new Scanner(System.in);
 		String str = sc.nextLine();
+		System.out.println(rev_int(Integer.valueOf(str)));
 		System.out.println(rev_str(str));	
 		System.out.println(rev_str_recur(str));
 	}
