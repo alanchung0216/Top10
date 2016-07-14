@@ -49,7 +49,9 @@ public class count_unique_pair_sort {
 		System.out.println();
 		for (int i=0; i<ic.length; i++){
 			System.out.println(ic[i]);
-		}		
+		}	
+		
+		// use binary search to calcuate diff count
 	}
 
 }
