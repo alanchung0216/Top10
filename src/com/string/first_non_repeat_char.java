@@ -2,6 +2,7 @@ package com.string;
 
 import java.util.HashMap;
 import java.util.LinkedHashMap;
+import java.util.Map;
 import java.util.Set;
 
 public class first_non_repeat_char {
@@ -18,8 +19,8 @@ public class first_non_repeat_char {
 				lh.put(ca[i], 1);
 			}
 		}
-		Set<HashMap.Entry<Character,Integer>> entry = lh.entrySet();
-		for (HashMap.Entry<Character,Integer> e: entry){
+		Set<Map.Entry<Character,Integer>> entry = lh.entrySet();
+		for (Map.Entry<Character,Integer> e: entry){
 			if (e.getValue() == 1) return e.getKey();			
 		}
 		//return (char) ' ';
