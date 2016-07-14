@@ -48,6 +48,7 @@ public class first_non_repeat_char {
 		//String str = "GeeksGeeks"; // throw exception
 		System.out.println(first_non_rep_char_lh(str));
 		System.out.println(first_non_rep_char(str));
+		
 	}
 
 }
