@@ -9,7 +9,8 @@ import java.util.Set;
 
 public class counting_substrings {
 	public static int count_substring(String s){
-		//Set<String> lhs = new LinkedHashSet<String>(); // no need only if we care about order
+		// no need LinkedHashSet,only if we care about order
+		//Set<String> lhs = new LinkedHashSet<String>(); 
 		Set<String> lhs = new HashSet<String>();
 		for (int i=0; i<s.length(); i++){
 			for (int j=i; j<s.length(); j++)

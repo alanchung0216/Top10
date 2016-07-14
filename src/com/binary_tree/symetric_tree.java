@@ -7,10 +7,10 @@ public class symetric_tree {
 	public static boolean isSymmetric(TNODE root) {
 		if (root == null)
 			return true;
-		return isSymmetric(root.left, root.right);
+		return isSymmetric_recur(root.left, root.right);
 	}
 	 
-	public static boolean isSymmetric(TNODE l, TNODE r) {
+	public static boolean isSymmetric_recur(TNODE l, TNODE r) {
 		if (l == null && r == null) {
 			return true;
 		} else if (r == null || l == null) {
@@ -20,9 +20,9 @@ public class symetric_tree {
 		if (l.val != r.val)
 			return false;
 	 
-		if (!isSymmetric(l.left, r.right))
+		if (!isSymmetric_recur(l.left, r.right))
 			return false;
-		if (!isSymmetric(l.right, r.left))
+		if (!isSymmetric_recur(l.right, r.left))
 			return false;
 	 
 		return true;
@@ -50,25 +50,7 @@ public class symetric_tree {
 		}
 		return true;
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 	/*
 	
 	public static boolean isSymmetricIter(TNODE root) {
@@ -124,7 +106,7 @@ public class symetric_tree {
 		for (int i=0; i<input.length; i++){
 			bst.put_node(input[i]);
 		}
-		System.out.println("is tree symetric: "+isSymmetric(bst.root));
+		System.out.println("is tree symetric recursive: "+isSymmetric(bst.root));
 		System.out.println("is tree symetric using iter: "+isSymmetricIter(bst.root));
 
 		System.out.println();
