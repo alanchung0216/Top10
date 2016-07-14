@@ -21,7 +21,7 @@ class thread_A implements Runnable {
 			synchronized(name){
 				name.name = 5;
 				System.out.println("A updated shared name "+name.name);			
-		}
+			}
 		}
 	}
 }

@@ -1,5 +1,5 @@
 package com.try_out;
-
+// test static values
 class dataset {
 	int da;
 	dataset(int i){

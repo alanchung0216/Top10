@@ -25,17 +25,20 @@ class producer implements Runnable {
 				}
 			}
 			synchronized(sharedQueue){
+				sharedQueue.notifyAll();
 				sharedQueue.add(i);
 				System.out.println("add "+i
 				+" and size is "+sharedQueue.size());
-				sharedQueue.notifyAll();
 			}
+			/*
 			try {
-				Thread.sleep(50);
+				Thread.sleep(40);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+			*/
+			
 		}		
 	}
 }
@@ -59,6 +62,7 @@ class consumer implements Runnable {
 						e.printStackTrace();
 					}
 				}
+				//break;
 			}
 			synchronized(sharedQueue){
 				//int rem = sharedQueue.get(0);
@@ -67,14 +71,14 @@ class consumer implements Runnable {
 				System.out.println("remove and size is "
 						+sharedQueue.size());
 			}
-			/*
+			
 			try {
 				Thread.sleep(50);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			*/
+			
 		}
 	}
 }
@@ -87,8 +91,8 @@ public class P_C_wait_notify_ArrayList {
 		List<Integer> queue = new ArrayList<Integer>();
 		Thread tp = new Thread(new producer(queue, 4));
 		Thread tc = new Thread(new consumer(queue));
-		tp.start(); // this one first works  if it sleep a little
 		tc.start();
+		tp.start(); // this one first works  if it sleep a little
 
 	}
 }

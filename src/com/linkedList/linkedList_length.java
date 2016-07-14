@@ -26,8 +26,8 @@ class myLinkedList {
 			current = l;
 			return;
 		}
-		current.next = l;
-		current = l;
+		current.next = l; // important, do change order
+		current = l; // important, do change order
 	}
 }
 public class linkedList_length {

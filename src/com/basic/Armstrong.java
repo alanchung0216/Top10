@@ -89,15 +89,17 @@ public class Armstrong {
 			char[] ca = str.toCharArray();
 			int len = ca.length;
 			int total=0;
-			int rem;
-			while ((rem=num%10) != 0){
-				num /= 10;
+			//int rem;
+			//while ((rem=num%10) != 0){
+			while (num != 0) {
+				int rem = num % 10;
 				int d_total=1;
 				for (int j=0; j< len; j++){
 					d_total *= rem;
-					System.out.println("d_total  " + d_total);
+					//System.out.println("d_total  " + d_total);
 				}
 				total += d_total;
+				num = num / 10;
 			}
 			System.out.println("total " + total);
 			if (total == orig){
