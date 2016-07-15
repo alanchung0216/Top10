@@ -12,8 +12,17 @@ class pair {
 		this.j = j;
 		this.k = k;
 	}
-	int hashcode() {
-		return Integer.valueOf(this.i*this.j+1311);
+	// very important concept here
+	// this pair object need to be verified for uniqueness
+	// one easy way is to let them fall into same bucket k
+	// because i and j could be difficult to make them
+	// fall into the same bucket.
+	// (HashSet actually internally call HashMap<pair,dummy>)
+	// and causing conflict and force my equals method used.
+	public int hashCode() {
+		//return Integer.valueOf(this.i*this.j);
+		//return super.hashCode();
+		return k;
 	}
 	public boolean equals(Object obj) {
 		if (this == obj) return true;
@@ -24,7 +33,9 @@ class pair {
 			((other.i + other.j) == other.k)) { // differ pairs but same result
 			return true;
 		}
-		if ((this.i != other.i) || (this.j != other.j)) return false;
+		if ((this.i != other.i) || (this.j != other.j))
+	
+				return false;
 
 		return true;
 	}

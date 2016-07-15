@@ -1,6 +1,9 @@
 package com.hashmap;
 
 import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
 
 /*
 1) Initialize count as 0
@@ -12,6 +15,7 @@ import java.util.Arrays;
 5) Return count. 
  */
 public class count_unique_pair_sort {
+
 
 	public static void main(String[] args) {
 		
@@ -51,7 +55,25 @@ public class count_unique_pair_sort {
 			System.out.println(ic[i]);
 		}	
 		
-		// use binary search to calcuate diff count
+		// or use HashSet to remove duplicates
+		System.out.println("use HashSet ");
+		int[] id = {1, 4, 7, 40, 7, 46, 32};
+		Set<Integer> hs = new HashSet<Integer>();
+		for (Integer i:id){
+			hs.add(i);
+		}
+		int[] ik = new int[hs.size()];
+		Iterator<Integer> iter = hs.iterator();
+		int m=0;
+		while (iter.hasNext()){
+			ik[m] = iter.next();
+			m++;
+		}
+
+		for (int i=0; i<ik.length; i++){
+			System.out.printf("%d ", ik[i]);
+		}		
+		// use binary search to calculate diff count
 	}
 
 }

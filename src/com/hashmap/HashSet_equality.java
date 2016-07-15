@@ -40,7 +40,11 @@ public class HashSet_equality {
 		set.add(new PhoneNumber("732", "408-3241"));
 		System.out.println(set.size()); // will it return 1 or 2 ? 
 										// answer is 2 if no overwrite equals and hashcode
+										// because super.hashcode will be used which will
+										// fall into different bucket
 										// answer is 1 after we overwrite equals and hashcode 
+										// and hashcode return area code this will cause
+										// my equals to be called
 		
 		System.out.println(new PhoneNumber("732", "408-3241"));
 
