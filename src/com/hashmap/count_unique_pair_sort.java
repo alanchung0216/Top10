@@ -73,6 +73,7 @@ public class count_unique_pair_sort {
 		for (int i=0; i<ik.length; i++){
 			System.out.printf("%d ", ik[i]);
 		}		
+				
 		// use binary search to calculate diff count
 	}
 
