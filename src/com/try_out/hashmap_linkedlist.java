@@ -149,9 +149,7 @@ public class hashmap_linkedlist {
 		// Bloomberg question has nothing to do with collision list
 		// it wants to have a hashmap  with IBM as a key and value
 		// is a linked list that keep most recent 10 trade values
-		// we can remove 10 elements
-		// then clear the linkedlist
-		// then add them back to keep 10 items.
+
 		HashMap<String, LinkedList<Integer>> hml = new HashMap<String, LinkedList<Integer>>();
 		
 		LinkedList<Integer> li = new LinkedList<Integer>();
@@ -170,10 +168,13 @@ public class hashmap_linkedlist {
 			System.out.println("entries "+i.getKey());
 			LinkedList<Integer> lst = i.getValue();
 			if (lst.size() > 10)
+				// track only first 10
 				System.out.println(lst.subList(0,10)+" ");	
 			else
 				System.out.println(lst.subList(0,lst.size())+" ");
 		}
+		// we should also implement prune to only keep 10 items
+		// to save memory.
 	}
 }
 	
