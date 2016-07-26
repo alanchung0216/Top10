@@ -1,6 +1,6 @@
 package com.linkedList;
 
-public class find_linkedlist_cycle {
+public class find_myLinkedlist_cycle {
 	
 	public static boolean find_cycle(myLinkedList mylist){
 		lnode cur = mylist.head;

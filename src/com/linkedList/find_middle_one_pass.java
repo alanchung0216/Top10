@@ -72,9 +72,9 @@ public class find_middle_one_pass {
 		// findlength() is static so don't initialize linkedList_length
 		// linkedList_length ll = new linkedList_length(); 
 		System.out.println("my linked list length is "
-		                   + linkedList_length.findLength(mylist));
+		                   + myLinkedList_length.findLength(mylist));
 		// find middle node. but this is a two pass approach
-		int len = linkedList_length.findLength(mylist);
+		int len = myLinkedList_length.findLength(mylist);
 		lnode curr = mylist.head;
 		for (int i=0; i<len/2; i++) {
 			curr = curr.next;

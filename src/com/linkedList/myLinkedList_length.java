@@ -30,7 +30,7 @@ class myLinkedList {
 		current = l; // important, do change order
 	}
 }
-public class linkedList_length {
+public class myLinkedList_length {
 	
 	public static int findLength(myLinkedList mylist){
 		int count=0;
