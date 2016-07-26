@@ -1,4 +1,4 @@
-package com.basic;
+package com.algorithm;
 /*
 Factorials are very simple things. They're just products, 
 indicated by an exclamation mark. For instance, "four factorial" 

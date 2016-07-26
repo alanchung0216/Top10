@@ -45,6 +45,8 @@ public class find_middle_one_pass {
 		return count;
 	}
 */
+	// when answer this question, do not implemet linkedlist
+	// assume it's alread there.
 	public static int find_middle_onepass(myLinkedList mylist){
 		lnode cur = mylist.head;
 		lnode fast = mylist.head;
