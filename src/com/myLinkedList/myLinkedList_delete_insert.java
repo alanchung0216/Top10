@@ -1,4 +1,4 @@
-package com.linkedList;
+package com.myLinkedList;
 
 public class myLinkedList_delete_insert {
 	public static myLinkedList insertNode(myLinkedList list, int val){

@@ -1,4 +1,4 @@
-package com.linkedList;
+package com.myLinkedList;
 
 public class find_myLinkedlist_cycle {
 	

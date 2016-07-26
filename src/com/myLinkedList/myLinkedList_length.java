@@ -1,4 +1,4 @@
-package com.linkedList;
+package com.myLinkedList;
 
 class lnode {
 	public int value;

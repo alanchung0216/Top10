@@ -1,4 +1,4 @@
-package com.linkedList;
+package com.myLinkedList;
 /* these two class already under linkedList_length.java
  * since they are in the same package com.liskedList as
  * find_middle_one_pass.java we don't need to redefine again. 
