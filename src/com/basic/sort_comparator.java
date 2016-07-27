@@ -57,7 +57,7 @@ class Dog implements Comparator<Dog>, Comparable<Dog>{
 
    // Overriding the compare method to sort the age 
    public int compare(Dog d, Dog d1){
-      return d.age - d1.age;
+      return d.age - d1.age; // primitive can't use compareTo
    }
 }
 
