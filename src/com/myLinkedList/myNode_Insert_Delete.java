@@ -1,5 +1,32 @@
 package com.myLinkedList;
 
+/*
+ * this implementation is done by Alan Chung
+ * things need to note are
+ * 1. There is no linkedlist class, Node itself is the head
+ *    of the list. we can simple add, insert and delete;
+ * 2. there are return void and return Node methods.
+ *    coreect versions are return Node, add, insert and delete
+ * 3. add only add to the end of the list, insert/delete will 
+ *    insert/delete before the target
+ *    
+ * Derek Banas has youtube linkedlist tutorial
+ *     he use a SimpleList which has only a reference 
+ *     to firstLink (head)
+ *     insertFirst will insert before the firstlink (head)
+ *     deleteFirst will delete the firstlink (head)
+ *     find will start from head and find the match 
+ *     so far it's straight foward. He does not add item to the end.
+ *     
+ *     delete a particular node, the implementation is similar
+ *     to my delete. You need to have pre and current to handle
+ *     delete operation.
+ *     
+ *     He does not have insert before a particular target
+ *     Overall , since he has a linklist class (which I don't have)
+ *     his code is a little bit easy to follow.
+ */
+
 class Node {
 	int val;
 	Node next;
@@ -11,15 +38,14 @@ class Node {
 		return String.valueOf(val);
 	}
 }
-
+/*
 class SimpleList {
-	Node head;
-	Node current;
+	Node head; // firstlink
 	SimpleList(){
 		head = null;
-		current = null;
 	}
 }
+*/
 public class myNode_Insert_Delete {
 	public static void showList(Node n){
 		Node head = n;
