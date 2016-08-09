@@ -35,6 +35,7 @@ public class callable_example {
 			//add Future to the list, we can get return value using Future
 			list.add(future);
 		}
+		System.out.println("###########################");
 		for(Future<String> fut : list){
 			try {
 				//print the return value of Future, notice the output delay in console
