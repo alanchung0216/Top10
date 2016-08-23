@@ -27,7 +27,7 @@ class PhoneNumber {
       if (getClass() != obj.getClass())
          return false;
       PhoneNumber other = (PhoneNumber) obj;
-      if (this.code != other.code)
+      if ((this.code != other.code) || (this.number != other.number))
          return false;
       return true;
    }
@@ -38,6 +38,7 @@ public class HashSet_equality {
 		HashSet<PhoneNumber> set = new HashSet<PhoneNumber>();
 		set.add(new PhoneNumber("732", "408-3241"));
 		set.add(new PhoneNumber("732", "408-3241"));
+		set.add(new PhoneNumber("732", "408-3242"));
 		System.out.println(set.size()); // will it return 1 or 2 ? 
 										// answer is 2 if no overwrite equals and hashcode
 										// because super.hashcode will be used which will
