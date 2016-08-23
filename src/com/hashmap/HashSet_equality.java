@@ -11,7 +11,7 @@ class PhoneNumber {
 
    @Override
    public int hashCode() {
-      return Integer.valueOf(this.code);
+      return Integer.valueOf(this.code) ^ Integer.valueOf(this.number);
    }
 
    public String toString() {
@@ -36,9 +36,9 @@ class PhoneNumber {
 public class HashSet_equality {
 	public static void main(String[] args) {
 		HashSet<PhoneNumber> set = new HashSet<PhoneNumber>();
-		set.add(new PhoneNumber("732", "408-3241"));
-		set.add(new PhoneNumber("732", "408-3241"));
-		set.add(new PhoneNumber("732", "408-3242"));
+		set.add(new PhoneNumber("732", "4083241"));
+		set.add(new PhoneNumber("732", "4083241"));
+		set.add(new PhoneNumber("732", "4083242"));
 		System.out.println(set.size()); // will it return 1 or 2 ? 
 										// answer is 2 if no overwrite equals and hashcode
 										// because super.hashcode will be used which will
