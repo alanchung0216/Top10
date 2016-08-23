@@ -38,7 +38,7 @@ public class HashSet_equality {
 		HashSet<PhoneNumber> set = new HashSet<PhoneNumber>();
 		set.add(new PhoneNumber("732", "4083241"));
 		set.add(new PhoneNumber("732", "4083241"));
-		set.add(new PhoneNumber("732", "4083242"));
+		//set.add(new PhoneNumber("732", "4083242"));
 		System.out.println(set.size()); // will it return 1 or 2 ? 
 										// answer is 2 if no overwrite equals and hashcode
 										// because super.hashcode will be used which will
