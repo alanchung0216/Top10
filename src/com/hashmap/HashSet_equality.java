@@ -11,7 +11,7 @@ class PhoneNumber {
 
    @Override
    public int hashCode() {
-      return Integer.valueOf(this.code) ^ Integer.valueOf(this.number);
+      return Integer.valueOf(this.code) ^ Integer.valueOf(this.number); 
    }
 
    public String toString() {
