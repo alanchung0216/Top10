@@ -41,10 +41,13 @@ public class HashSet_equality {
 		//set.add(new PhoneNumber("732", "4083242"));
 		System.out.println(set.size()); // will it return 1 or 2 ? 
 										// answer is 2 if no overwrite equals and hashcode
-										// because super.hashcode will be used which will
-										// fall into different bucket
-										// answer is 1 after we overwrite equals and hashcode 
-										// and hashcode return area code this will cause
+										// because super.hashcode will create two different
+										// hashcode ( two "new" will create objects on two memory heap
+										// locations) which will fall into two different buckets.
+										// That means two different key objects so the count is two
+										// (which is wrong!!!)
+										// correct answer should be 1 after we overwrite equals and hashcode 
+										// and hashcode return (area code^phone number) and  this will cause
 										// my equals to be called
 		
 		System.out.println(new PhoneNumber("732", "408-3241"));
