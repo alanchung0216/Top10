@@ -5,6 +5,12 @@ this link is best and talk about equals and why hashcode.
 it’s a little long but excellent. it has code too.
 http://www.javaworld.com/article/2072762/java-app-dev/object-equality.html
 
+why hashcode? because equals requires more computatuion. hashcode at least elimate
+some unnecessary equals(). if hashcode result is different they they must not equal.
+
+when override equals create you must create hashcode() otherwise the default
+hashcode will cause wrong results. default hashcode compares object memory location
+which almost be different even though two objects are equal.
 
  */
 

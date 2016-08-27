@@ -46,7 +46,7 @@ public class myLinkedList_delete_insert {
 		mylist.addNode(new lnode(9));
 		// remove node value >7
 		myLinkedList newList = removeNode(mylist, 7);
-		// insert same value before first encountered value
+		// insert some value before first encountered value
 		newList = insertNode(mylist, 6);
 		lnode curr = newList.head;
 		while (curr != null) {
