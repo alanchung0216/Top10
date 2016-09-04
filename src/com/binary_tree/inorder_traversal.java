@@ -14,14 +14,14 @@ public class inorder_traversal {
 		if (tnode == null) return;
 		Stack<TNODE> st = new Stack<TNODE>();
 		TNODE current = tnode;
-		while (!st.empty() || current != null){
+		while (!st.empty() || current != null){// use this to get into deep to left
 			if (current != null) {
 				st.push(current);
-				current = current.left;
+				current = current.left; // keep going left
 			} else {
-				TNODE top = st.pop();
+				TNODE top = st.pop(); // reach end of left, now take top to print value
 				System.out.printf("%d ",top.val);
-				current = top.right;
+				current = top.right; // move it to the right
 			}
 		}
 		
