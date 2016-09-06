@@ -18,14 +18,16 @@ public class count_unique_pair_sort {
 
 
 	public static void main(String[] args) {
-		
+		/*
 		int[] ia = {1, 4, 7, 40, 7, 46, 32};
 		int k = 47;
 		Arrays.sort(ia);
 		for (int i=0; i<ia.length; i++){
 			System.out.println(ia[i]);
-		}		
+		}	
+		*/	
 		// eliminate duplicates
+		/*
 		int[] ib = new int[ia.length];
 		ib[0] = ia[0];
 		int pre = ia[0];
@@ -54,7 +56,7 @@ public class count_unique_pair_sort {
 		for (int i=0; i<ic.length; i++){
 			System.out.println(ic[i]);
 		}	
-		
+		*/
 		// or use HashSet to remove duplicates
 		System.out.println("use HashSet ");
 		int[] id = {1, 4, 7, 40, 7, 46, 32};
@@ -69,11 +71,12 @@ public class count_unique_pair_sort {
 			ik[m] = iter.next();
 			m++;
 		}
-
+		Arrays.sort(ia);
+		System.out.printf("m ", m);
 		for (int i=0; i<ik.length; i++){
 			System.out.printf("%d ", ik[i]);
 		}		
-				
+		//for (int i=0; i<)
 		// use binary search to calculate diff count
 	}
 
