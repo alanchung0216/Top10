@@ -71,7 +71,7 @@ public class count_unique_pair_sort {
 			ik[m] = iter.next();
 			m++;
 		}
-		Arrays.sort(ia);
+		Arrays.sort(ik);
 		System.out.printf("m ", m);
 		for (int i=0; i<ik.length; i++){
 			System.out.printf("%d ", ik[i]);
