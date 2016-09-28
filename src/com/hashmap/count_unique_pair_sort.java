@@ -35,6 +35,7 @@ public class count_unique_pair_sort {
 			ik[m] = iter.next();
 			m++;
 		}
+
 		// sort ik
 		Arrays.sort(ik);
 
