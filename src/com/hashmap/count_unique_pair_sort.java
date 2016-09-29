@@ -20,9 +20,10 @@ public class count_unique_pair_sort {
 	public static void main(String[] args) {
 
 // this approach does not use hashcode/equals
-// but it's clean solution
+// because that solution may be wrong
+// this one is the correct solution
 		
-// first we  use HashSet to remove duplicates
+// first we  use HashSet to remove duplicates items
 		
 
 		int[] id = {1, 4, 7, 40, 7, 46, 32};
@@ -43,7 +44,7 @@ public class count_unique_pair_sort {
 		// we then sort ik
 		Arrays.sort(ik);
 
-		// finally it's an easy part
+		// finally this is an easy part
 		// simple walk through array to find
 		// if items added is 47
 		int count=0;
